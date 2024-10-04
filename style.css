@@ -6,7 +6,7 @@ p{
 }
 .container{
     display: grid;
-    grid-template-columns: 20px 20px 20px;
+    grid-template-columns: 100px 130px;
     background-color: blueviolet;
 }
 .grid-item{
@@ -26,4 +26,12 @@ p{
 .nav-item-container{
     display: flex;
     column-gap: 5px;
+}
+.sharp-init{
+    font-size: 2rem;
+    background-color: blue;
+}
+.sharp-text{
+    font-size: 2rem;
+    color: bisque;
 }
