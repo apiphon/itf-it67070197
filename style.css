@@ -2,7 +2,7 @@
     margin: 0;
 }
 p{
-    font-size: 1rem;
+    font-size: 2rem;
 }
 .container{
     display: grid;
@@ -19,6 +19,8 @@ p{
     column-gap: 5px;
     padding: 10px;
     justify-content: space-between;
+    font-size: 2rem;
+
 }
 .nav-item{
     background-color: bisque;
@@ -30,8 +32,11 @@ p{
 .sharp-init{
     font-size: 2rem;
     background-color: blue;
+    display: flex;
+    color: #00ffff;
 }
 .sharp-text{
     font-size: 2rem;
     color: bisque;
+    display: flex;
 }
