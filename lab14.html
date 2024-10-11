@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="style2.css">
 
 <body>
-    <h1 id="user">Username, ok</h1>
+    <h1 id="user">Username, Dashboard</h1>
+    <div class="chiefian">
+        เน้นใช้งานได้ ไม่เน้นสวย Any problem with downloading, feel free to contact me.
+        IT67070197@domain.kmitl.org.th
+    </div>
+    
+    <h2>
     <div class="profile" id="profile">
         <div class="notify">
             <p>999+</p>
@@ -23,62 +29,98 @@
     <h1>Phone Number List</h1>
 
     <input type="text" id="trname" placeholder="Name">
-    <input type="text" id="trname" placeholder="Tel">
-    <button onclick="setIng()">SET</button>
-    <button onclick="setIng()">EXPORT</button>
+    <input type="text" id="trtel" placeholder="Tel">
+    <button onclick="addParagraph()">SET</button>
+    <button onclick="saveCSV()">EXPORT</button>
     </div>
 
-    <table>
-        <tr>
-            <th>No.</th>
-            <th>Name</th>
-            <th>Phone Number</th>
-        </tr>
-        <tr>
-        </tr>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody id="phone-list">
+            <!-- Phone entries will be added here -->
+        </tbody>
     </table>
 
 
 
-    <div class='container'>
 
-    </div>
     <script>
         const username = document.getElementById("user");
         const input = document.getElementById("name");
         const inputurl = document.getElementById("urlimg");
         const profile = document.getElementById("profile");
-        const newdiv = document.getElementsByClassName("container")[0];
-        const labell = []
+        //const newdiv = document.getElementsByClassName("container")[0];
+        const phoneList = document.getElementById("phone-list");
+        let phoneEntries = [];
 
 
         function setName() {
-            username.textContent = input.value + ", ok";
+            username.textContent = input.value + ", Dashboard";
         }
         function setIng() {
             profile.style.backgroundImage = "url(" + inputurl.value + ")";
             console.log(inputurl.value);
-            //input.value = "";
+            inputurl.value = "";
         }
         function addParagraph() {
-            const newpara = document.createElement("p");
-            newpara.textContent = "new paragraph";
-            newdiv.appendChild(newpara);
+            //const newpara = document.createElement("tr");
+            //newpara.textContent = 'labell.value';
+            //newdiv.appendChild(newpara);
+            // Create new table row
+
+            const nameInput = document.getElementById("trname").value;
+            const phoneInput = document.getElementById("trtel").value;
+            // Create new table row
+            if (nameInput && phoneInput) {
+            const newRow = document.createElement("tr");
+
+            // Insert number cell
+            const numberCell = document.createElement("td");
+            numberCell.textContent = phoneEntries.length + 1;
+            newRow.appendChild(numberCell);
+
+            // Insert name cell
+            const nameCell = document.createElement("td");
+            nameCell.textContent = nameInput;
+            newRow.appendChild(nameCell);
+
+            // Insert phone number cell
+            const phoneCell = document.createElement("td");
+            phoneCell.textContent = phoneInput;
+            newRow.appendChild(phoneCell);
+
+            // Append the new row to the table body
+            phoneList.appendChild(newRow);
+
+            // Add entry to the array
+            phoneEntries.push([phoneEntries.length + 1, nameInput, phoneInput]);
+
+            // Clear the input fields after adding
+            document.getElementById("trname").value = "";
+            document.getElementById("trtel").value = "";
+            }
 
 
         }
         function saveCSV() {
-            const csvContent = phonenumber.map(row => row.join(",")).join("\n"); // Convert array to CSV string
+            const csvContent = phoneEntries.map(row => row.join(",")).join("\n"); // Convert array to CSV string
             const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
             const link = document.createElement("a");
             const url = URL.createObjectURL(blob);
             link.setAttribute("href", url);
-            link.setAttribute("download", "data.csv");
+            link.setAttribute("download", "DATA.csv");
             link.style.visibility = "hidden";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-        };
+            alert("Any problem with downloading, feel free to contact me.")
+        }
     </script>
 </body>
 </head>

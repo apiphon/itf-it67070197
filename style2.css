@@ -1,72 +1,91 @@
 html {
-    font-family: Roboto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.profile{
-    width: 300px;
-    height: 300px;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7a/Explosion_following_the_plane_impact_into_the_South_Tower_%28WTC_2%29_-_B6019~11.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    position: relative;
+
+.profile {
+  width: 300px;
+  height: 300px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7a/Explosion_following_the_plane_impact_into_the_South_Tower_%28WTC_2%29_-_B6019~11.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
 }
-.notify{
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 167, 166);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
+
+.notify {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 167, 166);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-h1{
-    font-size: 40px;
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
-label{
-    font-size: 30px;
+
+td,
+th {
+  border: 1px solid #bfbf7f;
+  text-align: left;
+  padding: 8px;
 }
-.inputval{
-    display: flex;
-    flex: 0;
-    width: 1000px;
-    justify-content: center;
+
+tr:nth-child(even) {
+  background-color: #fedcdb;
 }
-  input {
-    width: 100%;
-    background-color: #e0e0e0;
-    color: black;
-    padding: 15px 24px;
-    margin: 12px 0;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-  }
-  button{
-    background-color: #beb9e2;
-    font-size: 18px;
-    border-radius:  18px;
-    padding: 7px 25px;
-  }
-  
+
+h1 {
+  font-size: 40px;
+}
+
+.chiefian {
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  background: linear-gradient(90deg,
+      rgba(216, 229, 247, 100) 0%,
+      rgba(216, 238, 223, 1) 25%,
+      rgba(242, 217, 239, 1) 50%,
+      rgba(253, 241, 201, 1) 75%,
+      rgba(254, 221, 220, 1) 100%);
+}
+
+label {
+  font-size: 30px;
+}
+
+.inputval {
+  display: flex;
+  flex: 0;
+  width: 1000px;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  background-color: #fcf4dd;
+  color: black;
+  padding: 15px 24px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #beb9e2;
+  font-size: 18px;
+  border-radius: 18px;
+  padding: 7px 25px;
+}
